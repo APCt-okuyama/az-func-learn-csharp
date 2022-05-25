@@ -41,7 +41,6 @@ az storage account show-connection-string -g az-func-example-rg -n funcstorage00
 az functionapp create -g az-func-example-rg --consumption-plan-location japaneast --runtime dotnet --functions-version 4 --name my-example-func --storage-account funcstorage0001
 ```
 
-
 ## Functionsの作成とデプロイ
 基本的にはjavascriptと同様
 ```
@@ -62,3 +61,7 @@ func azure functionapp publish my-example-func
 ```
 az group delete --name az-func-example-rg -y
 ```
+
+# 他の言語との比較 (Java, Javascript)
+Javascriptで必要だったfunction.json設定ファイル必要ない。csファイル内でバインディングの設定を行える。
+C#の言語になれている場合は、FunctionsではC#が第一候補かもしれない。
